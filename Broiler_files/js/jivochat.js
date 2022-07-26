@@ -1,0 +1,3 @@
+var jivo_version="1.0.0-beta";
+(function(){try{var d=function(b){var c=document.getElementsByTagName("script");b="("+b+"=)([a-zA-Z0-9-, ]{0,})";for(var a in c)if(/jivochat/.test(c[a].src))return c[a].src.match(new RegExp(b))[2]};window.addEventListener("load",function(){console.log("[JivoChat x Tray] Initialized: "+jivo_version);var b=d("widget_id");d("store");var c=document.getElementsByTagName("head").item(0),a=document.createElement("script");a.setAttribute("type","text/javascript");a.setAttribute("src","//code.jivosite.com/widget.js");
+a.setAttribute("data-jv-id",b);a.async=!0;c.appendChild(a)})}catch(b){console.log(b)}})();
