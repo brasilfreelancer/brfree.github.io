@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Criar Postagem</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="mt-4">Criar Postagem</h1>
+    <form onsubmit="event.preventDefault(); criarPostagem();">
+      <div class="mb-3">
+        <label for="postagem-titulo" class="form-label">Título:</label>
+        <input type="text" id="postagem-titulo" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="postagem-categoria" class="form-label">Categoria:</label>
+        <select id="postagem-categoria" class="form-select">
+          <option value="">Selecione a Categoria</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="postagem-imagem" class="form-label">Imagem:</label>
+        <input type="file" id="postagem-imagem" class="form-control-file" accept="image/*" onchange="carregarImagem(this)">
+        <div id="postagem-imagem-container"></div>
+      </div>
+      <div class="mb-3">
+        <label for="postagem-descricao" class="form-label">Descrição:</label>
+        <textarea id="postagem-descricao" class="form-control"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Criar</button>
+    </form>
+  </div>
+  <script src="criar-postagem.js"></script>
+</body>
+</html>
